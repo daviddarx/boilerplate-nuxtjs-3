@@ -21,4 +21,10 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped></style>
+<style lang="pcss" scoped>
+.nav {
+  @apply p-4;
+  @apply text-gray-200;
+  @apply bg-gray-500;
+}
+</style>

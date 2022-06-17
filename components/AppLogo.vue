@@ -12,4 +12,10 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped></style>
+<style lang="pcss" scoped>
+h2 {
+  @apply p-4;
+  @apply text-gray-50;
+  @apply bg-gray-800;
+}
+</style>

@@ -8,4 +8,4 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped></style>
+<style lang="pcss" scoped></style>
