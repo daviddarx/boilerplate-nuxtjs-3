@@ -24,7 +24,7 @@ export default {
 <style lang="pcss" scoped>
 .nav {
   @apply p-4;
-  @apply text-gray-200;
+  @apply text-gray-100;
   @apply bg-gray-500;
 }
 </style>
