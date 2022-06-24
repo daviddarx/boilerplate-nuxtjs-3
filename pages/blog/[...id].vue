@@ -1,45 +1,27 @@
 <template>
   <article class="blog-detail">
     <h1>
-      {{ postResponse.data.collectionblog_by_id.title }}
+      {{ post.title }}
     </h1>
     <p>
-      {{ postResponse.data.collectionblog_by_id.date_created }}
+      {{ post.date_created }}
     </p>
     <p>
-      {{ postResponse.data.collectionblog_by_id.short_content }}
+      {{ post.short_content }}
     </p>
-    <div v-html="postResponse.data.collectionblog_by_id.content_wysiwyg"></div>
+    <div v-html="post.content_wysiwyg"></div>
   </article>
 </template>
 
 <script setup>
+import { usePost } from '~/composables/usePost'
+
 const route = useRoute()
-const id = route.params.id[0] // route.params.id
+const id = route.params.id[0]
 
-console.log('route', route.params.id[0])
+const post = await usePost(id)
 
-const { data: postResponse } = await useFetch(
-  'https://dex2bcoq.directus.app/graphql',
-  {
-    method: 'POST',
-    body: JSON.stringify({
-      query: `
-      query Post {
-        collectionblog_by_id(id: "${id}") {          
-          id
-          short_content
-          title
-          date_created
-          content_wysiwyg
-        }
-      }
-    `,
-    }),
-  }
-)
-
-if (!postResponse) throwError('No article found, 404')
+if (!post) throwError('No article found, 404')
 </script>
 
 <script>
