@@ -16,4 +16,8 @@ const { getItems } = useDirectusItems()
 const posts = await getItems({ collection: 'collectionblog' })
 </script>
 
-<style lang="pcss" scoped></style>
+<style lang="pcss" scoped>
+.blog-card {
+  @apply mt-10;
+}
+</style>

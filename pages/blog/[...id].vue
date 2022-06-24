@@ -23,3 +23,9 @@ const post = await getItemById({
 })
 if (!post) throwError('No article found, 404')
 </script>
+
+<style lang="pcss" scoped>
+p {
+  @apply mt-4;
+}
+</style>
