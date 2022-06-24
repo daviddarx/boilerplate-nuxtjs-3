@@ -1,7 +1,6 @@
 import { useFetch } from '#app'
 
 export const usePost = async (id) => {
-  console.log('test ' + id)
   const postResponse = await useFetch('https://dex2bcoq.directus.app/graphql', {
     method: 'POST',
     body: JSON.stringify({
