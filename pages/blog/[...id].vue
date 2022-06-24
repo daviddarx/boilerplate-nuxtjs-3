@@ -1,8 +1,6 @@
 <template>
   <article class="blog-detail">
-    <h1>
-      {{ post.title }}
-    </h1>
+    <h1>Nuxt Directus {{ post.title }}</h1>
     <p>
       {{ post.date_created }}
     </p>
