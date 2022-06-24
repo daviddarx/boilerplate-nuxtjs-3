@@ -37,7 +37,7 @@ const { data: postsResponse } = await useFetch(
 export default {
   name: 'BlogPage',
   mounted() {
-    console.log('blog page mounted', this.postsResponse.data.collectionblog[0])
+    // console.log('blog page mounted', this.postsResponse.data.collectionblog[0])
   },
 }
 </script>
