@@ -1,55 +1,27 @@
 <template>
   <article class="blog-detail">
     <h1>
-      {{ postResponse.data.collectionblog_by_id.title }}
+      {{ post.title }}
     </h1>
     <p>
-      {{ postResponse.data.collectionblog_by_id.date_created }}
+      {{ post.date_created }}
     </p>
     <p>
-      {{ postResponse.data.collectionblog_by_id.short_content }}
+      {{ post.short_content }}
     </p>
-    <div v-html="postResponse.data.collectionblog_by_id.content_wysiwyg"></div>
+    <div v-html="post.content_wysiwyg"></div>
   </article>
 </template>
 
 <script setup>
+const { getItemById } = useDirectusItems()
 const route = useRoute()
-const id = route.params.id
 
-const { data: postResponse } = await useFetch(
-  'https://dex2bcoq.directus.app/graphql',
-  {
-    method: 'POST',
-    body: JSON.stringify({
-      query: `
-      query Post {
-        collectionblog_by_id(id: "${id}") {
-          id
-          short_content
-          title
-          date_created
-          content_wysiwyg
-        }
-      }
-    `,
-    }),
-  }
-)
-
-if (!postResponse) throwError('No article found, 404')
-</script>
-
-<script>
-export default {
-  name: 'BlogDetailPage',
-  mounted() {
-    console.log(
-      'blog detail page mounted',
-      this.postResponse.data.collectionblog_by_id
-    )
-  },
-}
+const post = await getItemById({
+  collection: 'collectionblog',
+  id: route.params.id,
+})
+if (!post) throwError('No article found, 404')
 </script>
 
 <style lang="pcss" scoped>
