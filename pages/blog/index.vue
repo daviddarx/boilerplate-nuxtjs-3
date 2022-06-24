@@ -20,7 +20,7 @@ const posts = await usePosts()
 export default {
   name: 'BlogPage',
   mounted() {
-    // console.log('blog page mounted', this.postsResponse.data.collectionblog[0])
+    console.log('blog page mounted', this.posts)
   },
 }
 </script>

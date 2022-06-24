@@ -28,10 +28,7 @@ if (!post) throwError('No article found, 404')
 export default {
   name: 'BlogDetailPage',
   mounted() {
-    /* console.log(
-      'blog detail page mounted',
-      this.postResponse.data.collectionblog_by_id
-    ) */
+    console.log('blog detail page mounted', this.post)
   },
 }
 </script>
