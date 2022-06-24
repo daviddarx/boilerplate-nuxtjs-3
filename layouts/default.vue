@@ -17,4 +17,8 @@ export default {
 }
 </script>
 
-<style lang="pcss" scoped></style>
+<style lang="pcss" scoped>
+.content {
+  @apply p-4;
+}
+</style>
