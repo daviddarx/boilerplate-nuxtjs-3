@@ -1,4 +1,5 @@
 @tailwind utilities;
+@tailwind components;
 
 @layer utilities {
   .text-h1 {
@@ -60,5 +61,11 @@
         @apply mb-[1em];
       }
     }
+  }
+}
+
+@layer components {
+  .applied {
+    @apply bg-gray-200 px-8 py-2;
   }
 }

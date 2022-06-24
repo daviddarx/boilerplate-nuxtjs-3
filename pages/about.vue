@@ -1,6 +1,7 @@
 <template>
   <article class="about">
     <h1>I am the about page</h1>
+    <p class="test">Applied custom class</p>
   </article>
 </template>
 
@@ -10,4 +11,8 @@ export default {
 }
 </script>
 
-<style lang="pcss" scoped></style>
+<style lang="pcss" scoped>
+.test {
+  @apply applied;
+}
+</style>
