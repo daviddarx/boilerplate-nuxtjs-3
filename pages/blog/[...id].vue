@@ -44,10 +44,10 @@ if (!postResponse) throwError('No article found, 404')
 export default {
   name: 'BlogDetailPage',
   mounted() {
-    console.log(
+    /* console.log(
       'blog detail page mounted',
       this.postResponse.data.collectionblog_by_id
-    )
+    ) */
   },
 }
 </script>
