@@ -9,9 +9,7 @@
     <p>
       {{ post.short_content }}
     </p>
-    <p>
-      {{ post.content }}
-    </p>
+    <p v-html="post.content_wysiwyg"></p>
   </article>
 </template>
 
