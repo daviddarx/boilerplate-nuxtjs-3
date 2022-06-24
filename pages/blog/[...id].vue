@@ -24,7 +24,7 @@ const { data: postResponse } = await useFetch(
     body: JSON.stringify({
       query: `
       query Post {
-        collectionblog_by_id(id: "${id}") {
+        collectionblog_by_id(id: "4c78dfe0-8d80-4183-9119-406ce4e21d32") {
           id
           short_content
           title
