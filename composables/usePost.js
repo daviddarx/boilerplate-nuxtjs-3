@@ -1,7 +1,9 @@
 import { useFetch } from '#app'
 
 export const usePost = async (id) => {
-  const postResponse = await useFetch('https://dex2bcoq.directus.app/graphql', {
+  const { BACKEND_BASE_URL } = useRuntimeConfig()
+
+  const postResponse = await useFetch(`${BACKEND_BASE_URL}/graphql`, {
     method: 'POST',
     body: JSON.stringify({
       query: `
