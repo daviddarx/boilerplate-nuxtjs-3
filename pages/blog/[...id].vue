@@ -33,8 +33,4 @@ export default {
 }
 </script>
 
-<style lang="pcss" scoped>
-p {
-  @apply mt-4;
-}
-</style>
+<style lang="pcss" scoped></style>

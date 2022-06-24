@@ -24,7 +24,10 @@ export default {
 <style lang="pcss" scoped>
 .nav {
   @apply p-4;
-  @apply text-gray-100;
-  @apply bg-gray-500;
+  @apply bg-white;
+}
+
+.nav__el {
+  @apply inline-block mr-10 font-bold;
 }
 </style>

@@ -1,13 +1,13 @@
 <template>
   <div class="website">
-    <header class="header">
+    <header class="website__header">
       <AppLogo />
       <AppNav />
     </header>
-    <main class="content">
+    <main class="website__content text-content">
       <slot />
     </main>
-    <AppFooter class="footer" />
+    <AppFooter class="website__footer" />
   </div>
 </template>
 
@@ -18,7 +18,15 @@ export default {
 </script>
 
 <style lang="pcss" scoped>
-.content {
+.website {
+  @apply flex flex-col min-h-screen;
+}
+
+.website__content {
+  @apply flex-grow ;
+  @apply p-10 pt-0;
+}
+.website__footer {
   @apply p-4;
 }
 </style>

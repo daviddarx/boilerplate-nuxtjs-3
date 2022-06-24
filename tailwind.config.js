@@ -39,8 +39,8 @@ module.exports = {
         '11/12': '91.666667%',
       },
       colors: {
-        primary: colors.sky,
-        secondary: colors.green,
+        primary: colors.green,
+        secondary: colors.yellow,
       },
       transitionProperty: {
         text: 'color',

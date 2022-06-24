@@ -10,6 +10,6 @@ export default {
 
 <style lang="pcss" scoped>
 .footer {
-  @apply p-4 mt-10;
+  @apply bg-gray-200;
 }
 </style>
