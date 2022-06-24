@@ -15,9 +15,9 @@
 
 <script setup>
 const route = useRoute()
-const id = route.params.id
+const id = '4c78dfe0-8d80-4183-9119-406ce4e21d32' // route.params.id
 
-console.log('route', route)
+console.log('route', route.params.id[0])
 
 const { data: postResponse } = await useFetch(
   'https://dex2bcoq.directus.app/graphql',
@@ -26,7 +26,7 @@ const { data: postResponse } = await useFetch(
     body: JSON.stringify({
       query: `
       query Post {
-        collectionblog_by_id(id: "4c78dfe0-8d80-4183-9119-406ce4e21d32") {
+        collectionblog_by_id(id: "${id}") {          
           id
           short_content
           title
