@@ -17,6 +17,8 @@
 const route = useRoute()
 const id = route.params.id
 
+console.log('route', route)
+
 const { data: postResponse } = await useFetch(
   'https://dex2bcoq.directus.app/graphql',
   {
