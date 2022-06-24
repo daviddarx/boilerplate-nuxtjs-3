@@ -15,7 +15,7 @@
 
 <script setup>
 const route = useRoute()
-const id = '4c78dfe0-8d80-4183-9119-406ce4e21d32' // route.params.id
+const id = route.params.id[0] // route.params.id
 
 console.log('route', route.params.id[0])
 
