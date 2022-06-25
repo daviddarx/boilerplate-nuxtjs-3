@@ -8,6 +8,7 @@
       <slot />
     </main>
     <AppFooter class="website__footer" />
+    <AppTransition />
   </div>
 </template>
 
@@ -20,6 +21,10 @@ export default {
 <style lang="pcss" scoped>
 .website {
   @apply flex flex-col min-h-screen;
+}
+
+.website__header {
+  @apply relative z-50;
 }
 
 .website__content {
